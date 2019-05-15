@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="960.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CPController">
+   <children>
+
+         <MenuBar fx:id="menu" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+           <menus>
+             <Menu mnemonicParsing="false" text="User">
+               <items>
+               	<MenuItem fx:id="switch" mnemonicParsing="false" onAction="#handleMenu" text="Switch User" />
+                   <MenuItem fx:id="currentUser" mnemonicParsing="false" text="" />
+               </items>
+             </Menu>
+             <Menu mnemonicParsing="false" text="Animation">
+               <items>
+   	            <MenuItem fx:id="aluAN" mnemonicParsing="false" onAction="#handleMenu" text="ALU" />
+	           	<MenuItem fx:id="storeAN" mnemonicParsing="false" onAction="#handleMenu" text="Store" />
+	            <MenuItem fx:id="loadAN" mnemonicParsing="false" onAction="#handleMenu" text="Load" />
+	            <MenuItem mnemonicParsing="false" text="Branch" />
+   	        </items>
+             </Menu>
+             <Menu mnemonicParsing="false" text="Drag n Drop">
+             	<items>
+   	      		<MenuItem fx:id="drag" mnemonicParsing="false" onAction="#handleMenu" text="Open Drag and Drop" />
+             	</items>
+             </Menu>
+             <Menu mnemonicParsing="false" text="Data Path">
+             	<items>
+   	          	<MenuItem fx:id="DPALU" mnemonicParsing="false" onAction="#handleMenu" text="ALU" />
+   	          	<MenuItem fx:id="DPSTORE" mnemonicParsing="false" onAction="#handleMenu" text="Store" />
+   	          	<MenuItem fx:id="DPLOAD" mnemonicParsing="false" onAction="#handleMenu" text="Load" />
+   	          	<MenuItem fx:id="DPBRANCH" mnemonicParsing="false" onAction="#handleMenu" text="Branch" />
+             	</items>
+             </Menu>
+             <Menu mnemonicParsing="false" text="Control Unit">
+               <items>
+                 <MenuItem fx:id="CPALU" mnemonicParsing="false" onAction="#handleMenu" text="ALU" />
+   	          	<MenuItem fx:id="CPSTORE" mnemonicParsing="false" onAction="#handleMenu" text="Store" />
+   	          	<MenuItem fx:id="CPLOAD" mnemonicParsing="false" onAction="#handleMenu" text="Load" />
+   	          	<MenuItem fx:id="CPBRANCH" mnemonicParsing="false" onAction="#handleMenu" text="Branch" />
+               </items>
+             </Menu>
+           </menus>
+         </MenuBar>
+         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="114.0" layoutX="154.0" layoutY="247.0" stroke="BLACK" strokeType="INSIDE" width="102.0" />
+         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="164.0" layoutX="358.0" layoutY="220.0" stroke="BLACK" strokeType="INSIDE" width="133.0" />
+         <Ellipse fill="WHITE" layoutX="504.0" layoutY="436.0" radiusX="24.0" radiusY="35.0" stroke="BLACK" strokeType="INSIDE" />
+         <Ellipse fill="WHITE" layoutX="609.0" layoutY="179.0" radiusX="24.0" radiusY="25.0" stroke="BLACK" strokeType="INSIDE" />
+         <Ellipse fill="WHITE" layoutX="878.0" layoutY="307.0" radiusX="15.0" radiusY="35.0" stroke="BLACK" strokeType="INSIDE" />
+      <Polygon fill="WHITE" layoutX="650.0" layoutY="312.0" scaleX="0.5" scaleY="0.55" stroke="BLACK" strokeWidth="2.0">
+         <points>
+            <Double fx:value="-45.0" />
+            <Double fx:value="100.0" />
+            <Double fx:value="65.0" />
+            <Double fx:value="20.0" />
+            <Double fx:value="65.0" />
+            <Double fx:value="-80.0" />
+            <Double fx:value="-45.0" />
+            <Double fx:value="-140.0" />
+            <Double fx:value="-45.0" />
+            <Double fx:value="-60.0" />
+            <Double fx:value="-25.0" />
+            <Double fx:value="-30.0" />
+            <Double fx:value="-45.0" />
+            <Double fx:value="-10.0" />
+         </points>
+      </Polygon>
+      <Polygon fill="WHITE" layoutX="232.0" layoutY="160.0" scaleX="0.3" scaleY="0.32" stroke="BLACK" strokeWidth="2.0">
+         <points>
+            <Double fx:value="-45.0" />
+            <Double fx:value="100.0" />
+            <Double fx:value="65.0" />
+            <Double fx:value="20.0" />
+            <Double fx:value="65.0" />
+            <Double fx:value="-80.0" />
+            <Double fx:value="-45.0" />
+            <Double fx:value="-140.0" />
+            <Double fx:value="-45.0" />
+            <Double fx:value="-60.0" />
+            <Double fx:value="-25.0" />
+            <Double fx:value="-30.0" />
+            <Double fx:value="-45.0" />
+            <Double fx:value="-10.0" />
+         </points>
+      </Polygon>
+      <Polygon fill="WHITE" layoutX="658.0" layoutY="174.0" scaleX="0.3" scaleY="0.32" stroke="BLACK" strokeWidth="2.0">
+         <points>
+            <Double fx:value="-45.0" />
+            <Double fx:value="100.0" />
+            <Double fx:value="65.0" />
+            <Double fx:value="20.0" />
+            <Double fx:value="65.0" />
+            <Double fx:value="-80.0" />
+            <Double fx:value="-45.0" />
+            <Double fx:value="-140.0" />
+            <Double fx:value="-45.0" />
+            <Double fx:value="-60.0" />
+            <Double fx:value="-25.0" />
+            <Double fx:value="-30.0" />
+            <Double fx:value="-45.0" />
+            <Double fx:value="-10.0" />
+         </points>
+      </Polygon>
+         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="70.0" layoutX="71.0" layoutY="272.0" stroke="BLACK" strokeType="INSIDE" width="29.0" />
+         <Ellipse fill="WHITE" layoutX="731.0" layoutY="136.0" radiusX="15.0" radiusY="33.0" stroke="BLACK" strokeType="INSIDE" />
+         <Ellipse fill="WHITE" layoutX="577.0" layoutY="325.0" radiusX="15.0" radiusY="35.0" stroke="BLACK" strokeType="INSIDE" />
+         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="135.0" layoutX="731.0" layoutY="227.0" stroke="BLACK" strokeType="INSIDE" width="102.0" />
+         <Ellipse fill="WHITE" layoutX="330.0" layoutY="325.0" radiusX="15.0" radiusY="35.0" stroke="BLACK" strokeType="INSIDE" />
+         <Group />
+
+         <Line fx:id="line01" endX="30.0" layoutX="255.0" layoutY="307.0" scaleY="3.0" scaleZ="0.95" />
+         <Line fx:id="line02" endX="43.0" layoutX="589.0" layoutY="323.0" scaleY="3.0" scaleZ="0.95" startX="2.0" />
+         <Line fx:id="line04" endX="100.0" layoutX="128.0" layoutY="210.0" rotate="90.0" scaleY="3.0" scaleZ="0.95" startX="-93.0" />
+         <Line fx:id="line05" endX="60.0" layoutX="166.0" layoutY="114.0" scaleY="3.0" scaleZ="0.95" startX="-35.0" />
+         <Line fx:id="line06" layoutX="201.0" layoutY="168.0" scaleY="3.0" scaleZ="0.95" startX="25.0" />
+         <Line fx:id="line03" endX="53.0" layoutX="101.0" layoutY="306.0" scaleY="3.0" scaleZ="0.95" startX="-2.0" />
+         <Line fx:id="line07" endX="287.0" layoutX="365.0" layoutY="137.0" scaleY="3.0" scaleZ="0.95" startX="-100.0" />
+         <Line fx:id="line09" endX="250.0" layoutX="405.0" layoutY="295.0" rotate="90.0" scaleY="3.0" scaleZ="0.95" startX="18.0" />
+         <Line fx:id="line08" endX="17.0" layoutX="522.0" layoutY="412.0" scaleY="3.0" scaleZ="0.95" startX="-1.0" />
+         <Line fx:id="line010" endX="18.0" layoutX="632.0" layoutY="178.0" scaleY="3.0" scaleZ="0.95" startX="1.0" />
+         <Line fx:id="line011" endX="42.0" layoutX="543.0" layoutY="178.0" scaleY="3.0" scaleZ="0.95" startX="-5.0" />
+         <Line fx:id="line061" endX="2.0" layoutX="343.0" layoutY="324.0" scaleY="3.0" startX="15.0" />
+         <Line fx:id="line11" endX="62.0" layoutX="253.0" layoutY="275.0" rotate="90.0" scaleY="3.0" scaleZ="0.95" />
+         <Line fx:id="line12" endX="81.0" layoutX="277.0" layoutY="245.0" scaleY="3.0" scaleZ="0.95" startX="7.0" />
+         <Line fx:id="line21" endX="26.0" layoutX="271.0" layoutY="293.0" rotate="90.0" scaleY="3.0" scaleZ="0.95" />
+         <Line fx:id="line22" endX="53.0" layoutX="305.0" layoutY="279.0" scaleY="3.0" scaleZ="0.95" startX="-21.0" />
+         <Line fx:id="line31" endX="34.0" layoutX="283.0" layoutY="307.0" scaleY="3.0" scaleZ="0.95" startX="2.0"  />
+         <Line fx:id="line41" endX="34.0" layoutX="267.0" layoutY="325.0" rotate="90.0" scaleY="2.5" />
+         <Line fx:id="line42" endX="34.0" layoutX="283.0" layoutY="342.0" scaleY="3.0" scaleZ="0.95"  />
+         <Line fx:id="line51" endX="105.0" layoutX="231.0" layoutY="360.0" rotate="90.0" scaleY="3.0" scaleZ="0.95" />
+         <Line fx:id="line52" endX="142.0" layoutX="344.0" layoutY="412.0" scaleY="3.0" scaleZ="0.95" startX="-60.0" />
+         <Line fx:id="line61" endX="96.0" layoutX="536.0" layoutY="246.0" scaleY="3.0" scaleZ="0.95" startX="-45.0" />
+         <Line fx:id="line71" endX="25.0" layoutX="540.0" layoutY="306.0" scaleY="3.0" scaleZ="0.95" startX="-47.0"  />
+         <Line fx:id="line81" endX="21.0" layoutX="543.0" layoutY="342.0" scaleY="3.0" scaleZ="0.95" startX="-4.0"  />
+         <Line fx:id="line91" endX="39.0" layoutX="499.0" layoutY="306.0" scaleY="3.0" scaleZ="0.95" startX="-8.0" />
+         <Line fx:id="line92" endX="84.0" layoutX="497.0" layoutY="348.0" rotate="90.0" scaleY="3.0" scaleZ="0.95" />
+         <Line fx:id="line93" endX="69.0" layoutX="638.0" layoutY="390.0" scaleY="3.0" scaleZ="0.95" startX="-100.0" />
+         <Line fx:id="line94" endX="66.0" layoutX="674.0" layoutY="357.0" rotate="90.0" scaleY="3.0" scaleZ="0.95" />
+         <Line fx:id="line95" endX="26.0" layoutX="706.0" layoutY="324.0" scaleY="3.0" scaleZ="0.95" />
+         <Line fx:id="line101" endX="32.0" layoutX="686.0" layoutY="289.0" scaleY="3.0" scaleZ="0.95" startX="2.0" />
+         <Line fx:id="line111" endX="36.0" layoutX="701.0" layoutY="271.0" rotate="90.0" scaleY="3.0" scaleZ="0.95" />
+         <Line fx:id="line112" endX="13.0" layoutX="719.0" layoutY="254.0" scaleY="3.0" scaleZ="0.95" />
+         <Line fx:id="line121" endX="19.0" layoutX="768.0" layoutY="356.0" rotate="90.0" scaleY="3.0" scaleZ="0.95" startX="-117.0"  />
+         <Line fx:id="line122" endX="130.0" layoutX="717.0" layoutY="423.0" scaleY="3.0" scaleZ="0.95" startX="2.0"  />
+         <Line fx:id="line123" layoutX="897.0" layoutY="373.0" rotate="90.0" scaleY="3.0" scaleZ="0.95" startX="-100.0"  />
+         <Line fx:id="line124" endX="19.0" layoutX="846.0" layoutY="324.0" scaleY="3.0" scaleZ="0.95"  />
+         <Line fx:id="line131" endX="31.0" layoutX="833.0" layoutY="296.0" scaleY="3.0" scaleZ="0.95"  />
+         <Line fx:id="line141" endX="22.0" layoutX="894.0" layoutY="306.0" scaleY="3.0" scaleZ="0.95" />
+         <Line fx:id="line142" endX="50.0" layoutX="959.0" layoutY="396.0" rotate="90.0" scaleY="3.0" scaleZ="0.95" startX="-133.0" />
+         <Line fx:id="line143" endX="593.0" layoutX="325.0" layoutY="487.0" scaleY="3.0" scaleZ="0.95" />
+         <Line fx:id="line144" endX="45.0" layoutX="338.0" layoutY="427.0" rotate="90.0" scaleY="3.0" scaleZ="0.95" startX="-74.0" />
+         <Line fx:id="line145" endX="18.0" layoutX="340.0" layoutY="369.0" scaleY="3.0" scaleZ="0.95" startX="-15.0" />
+         <Line fx:id="line171" endX="43.0" layoutX="749.0" layoutY="139.0" scaleY="3.0" scaleZ="0.95" startX="-2.0" />
+         <Line fx:id="line172" endX="16.0" layoutX="801.0" layoutY="114.0" rotate="90.0" scaleY="3.0" scaleZ="0.95" startX="-35.0" />
+         <Line fx:id="line173" endX="490.0" layoutX="301.0" layoutY="90.0" scaleY="3.0" scaleZ="0.95" startX="-249.0" />
+         <Line fx:id="line174" endX="100.0" layoutX="60.0" layoutY="197.0" rotate="90.0" scaleY="3.0" scaleZ="0.95" startX="-115.0" />
+         <Line fx:id="line175" endX="20.0" layoutX="51.0" layoutY="306.0" scaleY="3.0" scaleZ="0.95" startX="1.0" />
+         <Line fx:id="line151" endX="20.0" layoutX="442.0" layoutY="126.0" rotate="90.0" scaleY="3.0" scaleZ="0.95"  />
+         <Line fx:id="line152" endX="37.0" layoutX="682.0" layoutY="117.0" scaleY="3.0" scaleZ="0.95" startX="-231.0"  />
+         <Line fx:id="line161" endX="34.0" layoutX="684.0" layoutY="152.0" scaleY="3.0" scaleZ="0.95"  />
+         <Label layoutX="729.0" layoutY="503.0" text="Branch Instruction">
+            <font>
+               <Font size="24.0" />
+            </font>
+         </Label>
+         <Label fx:id="feedback" layoutX="53.0" layoutY="387.0" prefHeight="99.0" prefWidth="161.0" textAlignment="CENTER">
+            <font>
+               <Font size="28.0" />
+            </font>
+         </Label>
+         <Label layoutX="78.0" layoutY="296.0" prefHeight="17.0" prefWidth="20.0" text="PC">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font>
+         </Label>
+         <Label layoutX="361.0" layoutY="223.0" prefHeight="43.0" prefWidth="48.0" text="Read Addr 1" textAlignment="CENTER" wrapText="true" />
+         <Label layoutX="360.0" layoutY="261.0" prefHeight="43.0" prefWidth="48.0" text="Read Addr 2" textAlignment="CENTER" wrapText="true" />
+         <Label layoutX="366.0" layoutY="305.0" prefHeight="37.0" prefWidth="35.0" text="Write Addr" wrapText="true" />
+         <Label layoutX="366.0" layoutY="357.0" prefHeight="21.0" prefWidth="71.0" text="Write Data" wrapText="true" />
+         <Label layoutX="439.0" layoutY="229.0" prefHeight="35.0" prefWidth="40.0" text="Read Data 1" wrapText="true" />
+         <Label layoutX="439.0" layoutY="283.0" prefHeight="35.0" prefWidth="40.0" text="Read Data 2" wrapText="true" />
+         <Label layoutX="413.0" layoutY="335.0" text="Register File" underline="true" wrapText="true" />
+         <Label layoutX="156.0" layoutY="279.0" prefHeight="52.0" prefWidth="35.0" text="Read Addr" wrapText="true" />
+         <Label layoutX="214.0" layoutY="280.0" prefHeight="52.0" prefWidth="35.0" text="Instru-ction" wrapText="true" />
+         <Label layoutX="172.0" layoutY="247.0" prefHeight="50.0" prefWidth="57.0" text="Instruction Memory" textAlignment="CENTER" underline="true" wrapText="true" />
+         <Label layoutX="732.0" layoutY="266.0" prefHeight="43.0" prefWidth="48.0" text="Data Memory" textAlignment="CENTER" underline="true" wrapText="true" />
+         <Label layoutX="742.0" layoutY="244.0" text="Address" />
+         <Label layoutX="741.0" layoutY="316.0" text="Write Data" />
+         <Label layoutX="793.0" layoutY="270.0" prefHeight="50.0" prefWidth="35.0" text="ReadData" textAlignment="RIGHT" wrapText="true" />
+         <Label layoutX="476.0" layoutY="418.0" prefHeight="37.0" prefWidth="56.0" text="Sign Extend" textAlignment="CENTER" wrapText="true" />
+         <Label layoutX="596.0" layoutY="157.0" prefHeight="43.0" prefWidth="30.0" text="Shift left 2" wrapText="true" />
+         <Label layoutX="571.0" layoutY="293.0" prefHeight="63.0" prefWidth="14.0" text="M U X" textAlignment="CENTER" wrapText="true" />
+         <Label layoutX="871.0" layoutY="278.0" prefHeight="63.0" prefWidth="14.0" text="M U X" textAlignment="CENTER" wrapText="true" />
+         <Label layoutX="323.0" layoutY="298.0" prefHeight="63.0" prefWidth="14.0" text="M U X" textAlignment="CENTER" wrapText="true" />
+         <Label layoutX="726.0" layoutY="107.0" prefHeight="63.0" prefWidth="14.0" text="M U X" textAlignment="CENTER" wrapText="true" />
+         <Label layoutX="188.0" layoutY="161.0" text="4" />
+         <Ellipse fill="WHITE" layoutX="31.0" layoutY="62.0" radiusX="28.0" radiusY="35.0" stroke="BLUE" strokeType="INSIDE" strokeWidth="2.0" />
+
+         <Line fx:id="RD2" endX="113.0" layoutX="324.0" layoutY="183.0" rotate="90.0" startX="-100.0" stroke="BLUE" strokeWidth="2.0" visible="false" />
+         <Line fx:id="RD1" endX="176.0" layoutX="155.0" layoutY="76.0" startX="-100.0" stroke="BLUE" strokeWidth="2.0" visible="false" />
+         <Button fx:id="RegDst0" layoutX="304.0" layoutY="175.0" mnemonicParsing="false" onAction="#handleRD" prefHeight="17.0" prefWidth="23.0" text="0" visible="false" />
+         <Button fx:id="RegDst1" layoutX="304.0" layoutY="200.0" mnemonicParsing="false" text="1" visible="false" />
+         <Label fx:id="RegDst" layoutX="261.0" layoutY="189.0" text="RegDst" visible="false" />
+
+         <Button fx:id="MemToReg1" layoutX="852.0" layoutY="201.0" mnemonicParsing="false" text="1" visible="false" />
+         <Button fx:id="MemToReg0" layoutX="852.0" layoutY="176.0" mnemonicParsing="false" onAction="#handleMTR" prefHeight="17.0" prefWidth="23.0" text="0" visible="false" />
+         <Line fx:id="MTR1" endX="722.0" layoutX="157.0" layoutY="46.0" startX="-102.0" stroke="BLUE" strokeWidth="2.0" visible="false" />
+         <Line fx:id="MTR2" endX="125.0" layoutX="866.0" layoutY="159.0" rotate="90.0" startX="-100.0" stroke="BLUE" strokeWidth="2.0" visible="false" />
+         <Label fx:id="MemToReg" layoutX="789.0" layoutY="189.0" text="MemToReg" visible="false" />
+
+         <Button fx:id="PCSrc0" layoutX="697.0" layoutY="63.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="23.0" text="0" visible="false" />
+         <Line fx:id="PC1" endX="580.0" layoutX="151.0" layoutY="39.0" startX="-100.0" stroke="BLUE" strokeWidth="2.0" visible="false" />
+         <Button fx:id="PCSrc1" layoutX="697.0" layoutY="88.0" mnemonicParsing="false" onAction="#handlePC" text="1" visible="false" />
+         <Line fx:id="PC2" endX="31.0" layoutX="732.0" layoutY="71.0" rotate="90.0" startX="-32.0" stroke="BLUE" strokeWidth="2.0" visible="false" />
+         <Label fx:id="PCSrc" layoutX="663.0" layoutY="69.0" text="PCSrc" visible="false" />
+
+         <Label fx:id="RegWrite" layoutX="346.0" layoutY="179.0" text="RedWrite" visible="false" />
+         <Line fx:id="RW2" endX="100.0" layoutX="402.0" layoutY="145.0" rotate="90.0" startX="-50.0" stroke="BLUE" strokeWidth="2.0" visible="false" />
+         <Button fx:id="RegWrite1" layoutX="398.0" layoutY="188.0" mnemonicParsing="false" text="1" visible="false" />
+         <Button fx:id="RegWrite0" layoutX="398.0" layoutY="163.0" mnemonicParsing="false" onAction="#handleRW" prefHeight="17.0" prefWidth="23.0" text="0" visible="false" />
+         <Line fx:id="RW1" endX="269.0" layoutX="157.0" layoutY="70.0" startX="-100.0" stroke="BLUE" strokeWidth="2.0" visible="false" />
+
+         <Label fx:id="ALUSrc" layoutX="502.0" layoutY="157.0" text="ALUSrc" visible="false" />
+         <Button fx:id="ALUSrc0" layoutX="545.0" layoutY="153.0" mnemonicParsing="false" onAction="#handleAS" prefHeight="17.0" prefWidth="23.0" text="0" visible="false" />
+         <Button fx:id="ALUSrc1" layoutX="545.0" layoutY="178.0" mnemonicParsing="false" text="1" visible="false" />
+         <Line fx:id="AS1" endX="420.0" layoutX="158.0" layoutY="64.0" startX="-100.0" stroke="BLUE" strokeWidth="2.0" visible="false" />
+         <Line fx:id="AS2" endX="125.0" layoutX="565.0" layoutY="178.0" rotate="90.0" startX="-100.0" stroke="BLUE" strokeWidth="2.0" visible="false" />
+
+         <Line fx:id="MW1" endX="611.0" layoutX="158.0" layoutY="59.0" startX="-100.0" stroke="BLUE" strokeWidth="2.0" visible="false" />
+         <Label fx:id="MemWrite" layoutX="685.0" layoutY="189.0" text="MemWrite" visible="false" />
+         <Line fx:id="MW2" endX="100.0" layoutX="753.0" layoutY="143.0" rotate="90.0" startX="-67.0" stroke="BLUE" strokeWidth="2.0" visible="false" />
+         <Button fx:id="MemWrite1" layoutX="743.0" layoutY="197.0" mnemonicParsing="false" text="1" visible="false" />
+         <Button fx:id="MemWrite0" layoutX="743.0" layoutY="172.0" mnemonicParsing="false" onAction="#handleMW" prefHeight="17.0" prefWidth="23.0" text="0" visible="false" />
+
+         <Line fx:id="MR1" endX="643.0" layoutX="156.0" layoutY="53.0" startX="-99.0" stroke="BLUE" strokeWidth="2.0" visible="false" />
+         <Line fx:id="MR2" endX="100.0" layoutX="786.0" layoutY="139.0" rotate="90.0" startX="-75.0" stroke="BLUE" strokeWidth="2.0" visible="false" />
+         <Button fx:id="MemRead1" layoutX="802.0" layoutY="200.0" mnemonicParsing="false" text="1" visible="false" />
+         <Label fx:id="MemRead" layoutX="828.0" layoutY="189.0" text="MemRead" visible="false" />
+         <Button fx:id="MemRead0" layoutX="802.0" layoutY="175.0" mnemonicParsing="false" onAction="#handleMR" prefHeight="17.0" prefWidth="23.0" text="0" visible="false" />
+
+         <Label fx:id="RegWriteRes" layoutX="419.0" layoutY="202.0" prefHeight="17.0" prefWidth="11.0" text="0" visible="false" />
+         <Label fx:id="RegDstRes" layoutX="310.0" layoutY="285.0" prefHeight="17.0" prefWidth="11.0" text="0" visible="false" />
+         <Label fx:id="MemToRegRes" layoutX="860.0" layoutY="265.0" prefHeight="20.0" prefWidth="3.0" text="0" visible="false" />
+         <Label fx:id="PCSrcRes" layoutX="711.0" layoutY="99.0" prefHeight="17.0" prefWidth="7.0" text="1" visible="false" />
+         <Label fx:id="ALUSrcRes" layoutX="559.0" layoutY="284.0" prefHeight="17.0" prefWidth="11.0" text="0" visible="false" />
+         <Label fx:id="MemWriteRes" layoutX="756.0" layoutY="212.0" text="0" visible="false" />
+         <Label fx:id="MemReadRes" layoutX="807.0" layoutY="212.0" text="0" visible="false" />
+         <Button fx:id="start" layoutX="10.0" layoutY="48.0" mnemonicParsing="false" onAction="#handleStart" style="-fx-background-color: white;" text="Start" />
+      <Label layoutX="649.0" layoutY="279.0" text="ALU" />
+      <Label layoutX="658.0" layoutY="142.0" text="ADD" />
+      <Label layoutX="231.0" layoutY="129.0" text="ADD" />
+   </children>
+
+</AnchorPane>

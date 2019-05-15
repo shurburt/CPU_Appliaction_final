@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.StoreController">
+   <children>
+      <MenuBar fx:id="menu" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="User">
+            <items>
+            	<MenuItem fx:id="switch" mnemonicParsing="false" onAction="#handleMenu" text="Switch User" />
+                <MenuItem fx:id="currentUser" mnemonicParsing="false" text="" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Animation">
+            <items>
+	            <MenuItem fx:id="aluAN" mnemonicParsing="false" onAction="#handleMenu" text="ALU" />
+	           	<MenuItem fx:id="storeAN" mnemonicParsing="false" onAction="#handleMenu" text="Store" />
+	            <MenuItem fx:id="loadAN" mnemonicParsing="false" onAction="#handleMenu" text="Load" />
+	            <MenuItem mnemonicParsing="false" text="Branch" />
+	        </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Drag n Drop">
+          	<items>
+				<MenuItem fx:id="drag" mnemonicParsing="false" onAction="#handleMenu" text="Open Drag and Drop" />
+			</items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Data Path">
+          	<items>
+	          	<MenuItem fx:id="DPALU" mnemonicParsing="false" onAction="#handleMenu" text="ALU" />
+	          	<MenuItem fx:id="DPSTORE" mnemonicParsing="false" onAction="#handleMenu" text="Store" />
+	          	<MenuItem fx:id="DPLOAD" mnemonicParsing="false" onAction="#handleMenu" text="Load" />
+	          	<MenuItem fx:id="DPBRANCH" mnemonicParsing="false" onAction="#handleMenu" text="Branch" />
+          	</items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Control Unit">
+            <items>
+              <MenuItem fx:id="CPALU" mnemonicParsing="false" onAction="#handleMenu" text="ALU" />
+   	          	<MenuItem fx:id="CPSTORE" mnemonicParsing="false" onAction="#handleMenu" text="Store" />
+   	          	<MenuItem fx:id="CPLOAD" mnemonicParsing="false" onAction="#handleMenu" text="Load" />
+   	          	<MenuItem fx:id="CPBRANCH" mnemonicParsing="false" onAction="#handleMenu" text="Branch" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="114.0" layoutX="154.0" layoutY="247.0" stroke="BLACK" strokeType="INSIDE" width="102.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="164.0" layoutX="358.0" layoutY="220.0" stroke="BLACK" strokeType="INSIDE" width="133.0" />
+      <Ellipse fill="WHITE" layoutX="504.0" layoutY="436.0" radiusX="24.0" radiusY="35.0" stroke="BLACK" strokeType="INSIDE" />
+      <Ellipse fill="WHITE" layoutX="586.0" layoutY="180.0" radiusX="24.0" radiusY="25.0" stroke="BLACK" strokeType="INSIDE" />
+      <Ellipse fill="WHITE" layoutX="878.0" layoutY="307.0" radiusX="15.0" radiusY="35.0" stroke="BLACK" strokeType="INSIDE" />
+      <Polygon fill="WHITE" layoutX="657.0" layoutY="173.0" scaleX="0.3" scaleY="0.32" stroke="BLACK" strokeWidth="2.0">
+         <points>
+            <Double fx:value="-45.0" />
+            <Double fx:value="100.0" />
+            <Double fx:value="65.0" />
+            <Double fx:value="20.0" />
+            <Double fx:value="65.0" />
+            <Double fx:value="-80.0" />
+            <Double fx:value="-45.0" />
+            <Double fx:value="-140.0" />
+            <Double fx:value="-45.0" />
+            <Double fx:value="-60.0" />
+            <Double fx:value="-25.0" />
+            <Double fx:value="-30.0" />
+            <Double fx:value="-45.0" />
+            <Double fx:value="-10.0" />
+         </points>
+      </Polygon>
+      <Polygon fill="WHITE" layoutX="233.0" layoutY="158.0" scaleX="0.3" scaleY="0.32" stroke="BLACK" strokeWidth="2.0">
+         <points>
+            <Double fx:value="-45.0" />
+            <Double fx:value="100.0" />
+            <Double fx:value="65.0" />
+            <Double fx:value="20.0" />
+            <Double fx:value="65.0" />
+            <Double fx:value="-80.0" />
+            <Double fx:value="-45.0" />
+            <Double fx:value="-140.0" />
+            <Double fx:value="-45.0" />
+            <Double fx:value="-60.0" />
+            <Double fx:value="-25.0" />
+            <Double fx:value="-30.0" />
+            <Double fx:value="-45.0" />
+            <Double fx:value="-10.0" />
+         </points>
+      </Polygon>
+      <Polygon fill="WHITE" layoutX="647.0" layoutY="312.0" scaleX="0.5" scaleY="0.55" stroke="BLACK" strokeWidth="2.0">
+         <points>
+            <Double fx:value="-45.0" />
+            <Double fx:value="100.0" />
+            <Double fx:value="65.0" />
+            <Double fx:value="20.0" />
+            <Double fx:value="65.0" />
+            <Double fx:value="-80.0" />
+            <Double fx:value="-45.0" />
+            <Double fx:value="-140.0" />
+            <Double fx:value="-45.0" />
+            <Double fx:value="-60.0" />
+            <Double fx:value="-25.0" />
+            <Double fx:value="-30.0" />
+            <Double fx:value="-45.0" />
+            <Double fx:value="-10.0" />
+         </points>
+      </Polygon>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="70.0" layoutX="71.0" layoutY="272.0" stroke="BLACK" strokeType="INSIDE" width="29.0" />
+      <Ellipse fill="WHITE" layoutX="731.0" layoutY="136.0" radiusX="15.0" radiusY="33.0" stroke="BLACK" strokeType="INSIDE" />
+      <Ellipse fill="WHITE" layoutX="577.0" layoutY="325.0" radiusX="15.0" radiusY="35.0" stroke="BLACK" strokeType="INSIDE" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="135.0" layoutX="731.0" layoutY="227.0" stroke="BLACK" strokeType="INSIDE" width="102.0" />
+      <Ellipse fill="WHITE" layoutX="330.0" layoutY="325.0" radiusX="15.0" radiusY="35.0" stroke="BLACK" strokeType="INSIDE" />
+      <Group />
+
+      <Line fx:id="line01" endX="30.0" layoutX="255.0" layoutY="307.0" scaleY="3.0" scaleZ="0.95" />
+      <Line fx:id="line02" endX="41.0" layoutX="589.0" layoutY="323.0" scaleY="3.0" scaleZ="0.95" startX="2.0" />
+      <Line fx:id="line04" endX="100.0" layoutX="128.0" layoutY="210.0" rotate="90.0" scaleY="3.0" scaleZ="0.95" startX="-93.0" />
+      <Line fx:id="line05" endX="60.0" layoutX="166.0" layoutY="114.0" scaleY="3.0" scaleZ="0.95" startX="-35.0" />
+      <Line fx:id="line06" layoutX="201.0" layoutY="168.0" scaleY="3.0" scaleZ="0.95" startX="25.0" />
+      <Line fx:id="line03" endX="53.0" layoutX="101.0" layoutY="306.0" scaleY="3.0" scaleZ="0.95" startX="-2.0" />
+      <Line fx:id="line07" endX="287.0" layoutX="365.0" layoutY="137.0" scaleY="3.0" scaleZ="0.95" startX="-106.0" />
+      <Line fx:id="line09" endX="250.0" layoutX="405.0" layoutY="295.0" rotate="90.0" scaleY="3.0" scaleZ="0.95" startX="18.0" />
+      <Line fx:id="line08" endX="17.0" layoutX="522.0" layoutY="412.0" scaleY="3.0" scaleZ="0.95" startX="-1.0" />
+      <Line fx:id="line010" endX="24.0" layoutX="539.0" layoutY="179.0" scaleY="3.0" scaleZ="0.95" />
+      <Line fx:id="line011" endX="42.0" layoutX="608.0" layoutY="178.0" scaleY="3.0" scaleZ="0.95" startX="1.0" />
+      <Line fx:id="line061" layoutX="343.0" layoutY="324.0" scaleY="3.0" startX="14.0" />
+      <Line fx:id="line11" endX="62.0" layoutX="253.0" layoutY="275.0" rotate="90.0" scaleY="3.0" scaleZ="0.95" visible="false" />
+      <Line fx:id="line12" endX="81.0" layoutX="277.0" layoutY="245.0" scaleY="3.0" scaleZ="0.95" startX="7.0" visible="false" />
+      <Line fx:id="line21" endX="26.0" layoutX="271.0" layoutY="293.0" rotate="90.0" scaleY="3.0" scaleZ="0.95" visible="false" />
+      <Line fx:id="line22" endX="53.0" layoutX="305.0" layoutY="279.0" scaleY="3.0" scaleZ="0.95" startX="-21.0" visible="false" />
+      <Line fx:id="line31" endX="33.0" layoutX="283.0" layoutY="306.0" scaleY="3.0" scaleZ="0.95" startX="2.0" visible="false" />
+      <Line fx:id="line41" endX="34.0" layoutX="267.0" layoutY="325.0" rotate="90.0" scaleY="2.5" visible="false" />
+      <Line fx:id="line42" endX="34.0" layoutX="283.0" layoutY="342.0" scaleY="3.0" scaleZ="0.95" visible="false" />
+      <Line fx:id="line51" endX="105.0" layoutX="231.0" layoutY="360.0" rotate="90.0" scaleY="3.0" scaleZ="0.95" visible="false" />
+      <Line fx:id="line52" endX="142.0" layoutX="344.0" layoutY="412.0" scaleY="3.0" scaleZ="0.95" startX="-60.0" visible="false" />
+      <Line fx:id="line61" endX="94.0" layoutX="536.0" layoutY="246.0" scaleY="3.0" scaleZ="0.95" startX="-45.0" visible="false" />
+      <Line fx:id="line71" endX="23.0" layoutX="540.0" layoutY="306.0" scaleY="3.0" scaleZ="0.95" startX="-47.0" visible="false" />
+      <Line fx:id="line81" endX="19.0" layoutX="543.0" layoutY="342.0" scaleY="3.0" scaleZ="0.95" startX="-4.0" visible="false" />
+      <Line fx:id="line91" endX="39.0" layoutX="499.0" layoutY="306.0" scaleY="3.0" scaleZ="0.95" startX="-5.0" visible="false" />
+      <Line fx:id="line92" endX="84.0" layoutX="497.0" layoutY="348.0" rotate="90.0" scaleY="3.0" scaleZ="0.95" visible="false" />
+      <Line fx:id="line93" endX="69.0" layoutX="638.0" layoutY="390.0" scaleY="3.0" scaleZ="0.95" startX="-100.0" visible="false" />
+      <Line fx:id="line94" endX="66.0" layoutX="674.0" layoutY="357.0" rotate="90.0" scaleY="3.0" scaleZ="0.95" visible="false" />
+      <Line fx:id="line95" endX="26.0" layoutX="706.0" layoutY="324.0" scaleY="3.0" scaleZ="0.95" visible="false" />
+      <Line fx:id="line101" endX="32.0" layoutX="686.0" layoutY="289.0" scaleY="3.0" scaleZ="0.95" visible="false" />
+      <Line fx:id="line111" endX="36.0" layoutX="701.0" layoutY="271.0" rotate="90.0" scaleY="3.0" scaleZ="0.95" visible="false" />
+      <Line fx:id="line112" endX="13.0" layoutX="719.0" layoutY="254.0" scaleY="3.0" scaleZ="0.95" visible="false" />
+      <Line fx:id="line121" endX="19.0" layoutX="768.0" layoutY="356.0" rotate="90.0" scaleY="3.0" scaleZ="0.95" startX="-117.0" visible="false" />
+      <Line fx:id="line122" endX="130.0" layoutX="717.0" layoutY="423.0" scaleY="3.0" scaleZ="0.95" startX="2.0" visible="false" />
+      <Line fx:id="line123" layoutX="897.0" layoutY="373.0" rotate="90.0" scaleY="3.0" scaleZ="0.95" startX="-100.0" visible="false" />
+      <Line fx:id="line124" endX="17.0" layoutX="846.0" layoutY="324.0" scaleY="3.0" scaleZ="0.95" visible="false" />
+      <Line fx:id="line131" endX="30.0" layoutX="833.0" layoutY="296.0" scaleY="3.0" scaleZ="0.95" visible="false" />
+      <Line fx:id="line141" endX="22.0" layoutX="894.0" layoutY="306.0" scaleY="3.0" scaleZ="0.95" visible="false" />
+      <Line fx:id="line142" endX="50.0" layoutX="959.0" layoutY="396.0" rotate="90.0" scaleY="3.0" scaleZ="0.95" startX="-133.0" visible="false" />
+      <Line fx:id="line143" endX="593.0" layoutX="325.0" layoutY="487.0" scaleY="3.0" scaleZ="0.95" visible="false" />
+      <Line fx:id="line144" endX="45.0" layoutX="338.0" layoutY="427.0" rotate="90.0" scaleY="3.0" scaleZ="0.95" startX="-74.0" visible="false" />
+      <Line fx:id="line145" endX="18.0" layoutX="340.0" layoutY="369.0" scaleY="3.0" scaleZ="0.95" startX="-15.0" visible="false" />
+      <Line fx:id="line171" endX="43.0" layoutX="749.0" layoutY="139.0" scaleY="3.0" scaleZ="0.95" startX="-2.0" visible="false" />
+      <Line fx:id="line172" endX="16.0" layoutX="801.0" layoutY="114.0" rotate="90.0" scaleY="3.0" scaleZ="0.95" startX="-35.0" visible="false" />
+      <Line fx:id="line173" endX="490.0" layoutX="301.0" layoutY="90.0" scaleY="3.0" scaleZ="0.95" startX="-249.0" visible="false" />
+      <Line fx:id="line174" endX="100.0" layoutX="60.0" layoutY="197.0" rotate="90.0" scaleY="3.0" scaleZ="0.95" startX="-115.0" visible="false" />
+      <Line fx:id="line175" endX="20.0" layoutX="51.0" layoutY="306.0" scaleY="3.0" scaleZ="0.95" startX="1.0" visible="false" />
+      <Line fx:id="line151" endX="20.0" layoutX="442.0" layoutY="126.0" rotate="90.0" scaleY="3.0" scaleZ="0.95" visible="false" />
+      <Line fx:id="line152" endX="36.0" layoutX="682.0" layoutY="117.0" scaleY="3.0" scaleZ="0.95" startX="-231.0" visible="false" />
+      <Line fx:id="line161" endX="34.0" layoutX="684.0" layoutY="152.0" scaleY="3.0" scaleZ="0.95" visible="false" />
+
+      <Circle fx:id="tb26" fill="GREEN" layoutX="521.0" layoutY="413.0" onMouseClicked="#mouseClicked" onMouseEntered="#mouseEntered" onMouseExited="#mouseExit" onMouseReleased="#mouseReleased" radius="10.0" scaleX="0.7" scaleY="0.7" />
+      <Circle fx:id="tb25" fill="GREEN" layoutX="71.0" layoutY="307.0" onMouseClicked="#mouseClicked" onMouseEntered="#mouseEntered" onMouseExited="#mouseExit" onMouseReleased="#mouseReleased" radius="10.0" scaleX="0.7" scaleY="0.7" />
+      <Circle fx:id="tb24" fill="GREEN" layoutX="746.0" layoutY="139.0" onMouseClicked="#mouseClicked" onMouseEntered="#mouseEntered" onMouseExited="#mouseExit" onMouseReleased="#mouseReleased" radius="10.0" scaleX="0.7" scaleY="0.7" />
+      <Circle fx:id="tb20" fill="GREEN" layoutX="452.0" layoutY="136.0" onMouseClicked="#mouseClicked" onMouseEntered="#mouseEntered" onMouseExited="#mouseExit" onMouseReleased="#mouseReleased" radius="10.0" scaleX="0.7" scaleY="0.7" />
+      <Circle fx:id="tb21" fill="GREEN" layoutX="718.0" layoutY="118.0" onMouseClicked="#mouseClicked" onMouseEntered="#mouseEntered" onMouseExited="#mouseExit" onMouseReleased="#mouseReleased" radius="10.0" scaleX="0.7" scaleY="0.7" />
+      <Circle fx:id="tb23" fill="GREEN" layoutX="717.0" layoutY="152.0" onMouseClicked="#mouseClicked" onMouseEntered="#mouseEntered" onMouseExited="#mouseExit" onMouseReleased="#mouseReleased" radius="10.0" scaleX="0.7" scaleY="0.7" />
+      <Circle fx:id="tb22" fill="GREEN" layoutX="685.0" layoutY="152.0" onMouseClicked="#mouseClicked" onMouseEntered="#mouseEntered" onMouseExited="#mouseExit" onMouseReleased="#mouseReleased" radius="10.0" scaleX="0.7" scaleY="0.7" />
+      <Circle fx:id="tb11" fill="GREEN" layoutX="562.0" layoutY="342.0" onMouseClicked="#mouseClicked" onMouseEntered="#mouseEntered" onMouseExited="#mouseExit" onMouseReleased="#mouseReleased" radius="10.0" scaleX="0.7" scaleY="0.7" />
+      <Circle fx:id="tb10" fill="GREEN" layoutX="562.0" layoutY="307.0" onMouseClicked="#mouseClicked" onMouseEntered="#mouseEntered" onMouseExited="#mouseExit" onMouseReleased="#mouseReleased" radius="10.0" scaleX="0.7" scaleY="0.7" />
+      <Circle fx:id="tb6" fill="GREEN" layoutX="486.0" layoutY="413.0" onMouseClicked="#mouseClicked" onMouseEntered="#mouseEntered" onMouseExited="#mouseExit" onMouseReleased="#mouseReleased" radius="10.0" scaleX="0.7" scaleY="0.7" />
+      <Circle fx:id="tb19" fill="GREEN" layoutX="358.0" layoutY="369.0" onMouseClicked="#mouseClicked" onMouseEntered="#mouseEntered" onMouseExited="#mouseExit" onMouseReleased="#mouseReleased" radius="10.0" scaleX="0.7" scaleY="0.7" />
+      <Circle fx:id="tb18" fill="GREEN" layoutX="893.0" layoutY="307.0" onMouseClicked="#mouseClicked" onMouseEntered="#mouseEntered" onMouseExited="#mouseExit" onMouseReleased="#mouseReleased" radius="10.0" scaleX="0.7" scaleY="0.7" />
+      <Circle fx:id="tb17" fill="GREEN" layoutX="863.0" layoutY="325.0" onMouseClicked="#mouseClicked" onMouseEntered="#mouseEntered" onMouseExited="#mouseExit" onMouseReleased="#mouseReleased" radius="10.0" scaleX="0.7" scaleY="0.7" />
+      <Circle fx:id="tb16" fill="GREEN" layoutX="863.0" layoutY="297.0" onMouseClicked="#mouseClicked" onMouseEntered="#mouseEntered" onMouseExited="#mouseExit" onMouseReleased="#mouseReleased" radius="10.0" scaleX="0.7" scaleY="0.7" />
+      <Circle fx:id="tb15" fill="GREEN" layoutX="833.0" layoutY="297.0" onMouseClicked="#mouseClicked" onMouseEntered="#mouseEntered" onMouseExited="#mouseExit" onMouseReleased="#mouseReleased" radius="10.0" scaleX="0.7" scaleY="0.7" />
+      <Circle fx:id="tb13" fill="GREEN" layoutX="686.0" layoutY="290.0" onMouseClicked="#mouseClicked" onMouseEntered="#mouseEntered" onMouseExited="#mouseExit" onMouseReleased="#mouseReleased" radius="10.0" scaleX="0.7" scaleY="0.7" />
+      <Circle fx:id="tb12" fill="GREEN" layoutX="732.0" layoutY="325.0" onMouseClicked="#mouseClicked" onMouseEntered="#mouseEntered" onMouseExited="#mouseExit" onMouseReleased="#mouseReleased" radius="10.0" scaleX="0.7" scaleY="0.7" />
+      <Circle fx:id="tb14" fill="GREEN" layoutX="732.0" layoutY="254.0" onMouseClicked="#mouseClicked" onMouseEntered="#mouseEntered" onMouseExited="#mouseExit" onMouseReleased="#mouseReleased" radius="10.0" scaleX="0.7" scaleY="0.7" />
+      <Circle fx:id="tb8" fill="GREEN" layoutX="630.0" layoutY="247.0" onMouseClicked="#mouseClicked" onMouseEntered="#mouseEntered" onMouseExited="#mouseExit" onMouseReleased="#mouseReleased" radius="10.0" scaleX="0.7" scaleY="0.7" />
+      <Circle fx:id="tb7" fill="GREEN" layoutX="491.0" layoutY="247.0" onMouseClicked="#mouseClicked" onMouseEntered="#mouseEntered" onMouseExited="#mouseExit" onMouseReleased="#mouseReleased" radius="10.0" scaleX="0.7" scaleY="0.7" />
+      <Circle fx:id="tb9" fill="GREEN" layoutX="492.0" layoutY="306.0" onMouseClicked="#mouseClicked" onMouseEntered="#mouseEntered" onMouseExited="#mouseExit" onMouseReleased="#mouseReleased" radius="10.0" scaleX="0.7" scaleY="0.7" />
+      <Circle fx:id="tb5" fill="GREEN" layoutX="315.0" layoutY="342.0" onMouseClicked="#mouseClicked" onMouseEntered="#mouseEntered" onMouseExited="#mouseExit" onMouseReleased="#mouseReleased" radius="10.0" scaleX="0.7" scaleY="0.7" />
+      <Circle fx:id="tb4" fill="GREEN" layoutX="315.0" layoutY="307.0" onMouseClicked="#mouseClicked" onMouseEntered="#mouseEntered" onMouseExited="#mouseExit" onMouseReleased="#mouseReleased" radius="10.0" scaleX="0.7" scaleY="0.7" />
+      <Circle fx:id="tb3" fill="GREEN" layoutX="358.0" layoutY="280.0" onMouseClicked="#mouseClicked" onMouseEntered="#mouseEntered" onMouseExited="#mouseExit" onMouseReleased="#mouseReleased" radius="10.0" scaleX="0.7" scaleY="0.7" />
+      <Circle fx:id="tb2" fill="GREEN" layoutX="358.0" layoutY="246.0" onMouseClicked="#mouseClicked" onMouseEntered="#mouseEntered" onMouseExited="#mouseExit" onMouseReleased="#mouseReleased" radius="10.0" scaleX="0.7" scaleY="0.7" />
+      <Circle fx:id="tb1" fill="GREEN" layoutX="284.0" layoutY="307.0" onMouseClicked="#mouseClicked" onMouseEntered="#mouseEntered" onMouseExited="#mouseExit" onMouseReleased="#mouseReleased" radius="10.0" scaleX="0.7" scaleY="0.7" />
+      <Label layoutX="389.0" layoutY="35.0" text="Store Instruction">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="InstCount" layoutX="814.0" layoutY="31.0" prefHeight="78.0" prefWidth="129.0" textAlignment="CENTER" wrapText="true">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="feedback" layoutX="53.0" layoutY="387.0" prefHeight="99.0" prefWidth="161.0" textAlignment="CENTER">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <Label layoutX="78.0" layoutY="296.0" prefHeight="17.0" prefWidth="20.0" text="PC">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="361.0" layoutY="223.0" prefHeight="43.0" prefWidth="48.0" text="Read Addr 1" textAlignment="CENTER" wrapText="true" />
+      <Label layoutX="360.0" layoutY="261.0" prefHeight="43.0" prefWidth="48.0" text="Read Addr 2" textAlignment="CENTER" wrapText="true" />
+      <Label layoutX="366.0" layoutY="305.0" prefHeight="37.0" prefWidth="35.0" text="Write Addr" wrapText="true" />
+      <Label layoutX="366.0" layoutY="357.0" prefHeight="21.0" prefWidth="71.0" text="Write Data" wrapText="true" />
+      <Label layoutX="439.0" layoutY="229.0" prefHeight="35.0" prefWidth="40.0" text="Read Data 1" wrapText="true" />
+      <Label layoutX="439.0" layoutY="283.0" prefHeight="35.0" prefWidth="40.0" text="Read Data 2" wrapText="true" />
+      <Label layoutX="413.0" layoutY="335.0" text="Register File" underline="true" wrapText="true" />
+      <Label layoutX="156.0" layoutY="279.0" prefHeight="52.0" prefWidth="35.0" text="Read Addr" wrapText="true" />
+      <Label layoutX="214.0" layoutY="280.0" prefHeight="52.0" prefWidth="35.0" text="Instru-ction" wrapText="true" />
+      <Label layoutX="172.0" layoutY="247.0" prefHeight="50.0" prefWidth="57.0" text="Instruction Memory" textAlignment="CENTER" underline="true" wrapText="true" />
+      <Label layoutX="732.0" layoutY="266.0" prefHeight="43.0" prefWidth="48.0" text="Data Memory" textAlignment="CENTER" underline="true" wrapText="true" />
+      <Label layoutX="742.0" layoutY="244.0" text="Address" />
+      <Label layoutX="741.0" layoutY="316.0" text="Write Data" />
+      <Label layoutX="793.0" layoutY="270.0" prefHeight="50.0" prefWidth="35.0" text="ReadData" textAlignment="RIGHT" wrapText="true" />
+      <Label layoutX="476.0" layoutY="418.0" prefHeight="37.0" prefWidth="56.0" text="Sign Extend" textAlignment="CENTER" wrapText="true" />
+      <Label layoutX="573.0" layoutY="158.0" prefHeight="43.0" prefWidth="30.0" text="Shift left 2" wrapText="true" />
+      <Label layoutX="571.0" layoutY="293.0" prefHeight="63.0" prefWidth="14.0" text="M U X" textAlignment="CENTER" wrapText="true" />
+      <Label layoutX="871.0" layoutY="278.0" prefHeight="63.0" prefWidth="14.0" text="M U X" textAlignment="CENTER" wrapText="true" />
+      <Label layoutX="323.0" layoutY="298.0" prefHeight="63.0" prefWidth="14.0" text="M U X" textAlignment="CENTER" wrapText="true" />
+      <Label layoutX="726.0" layoutY="107.0" prefHeight="63.0" prefWidth="14.0" text="M U X" textAlignment="CENTER" wrapText="true" />
+      <Label layoutX="188.0" layoutY="161.0" text="4" />
+      <Label layoutX="233.0" layoutY="128.0" text="ADD" />
+      <Label layoutX="655.0" layoutY="142.0" text="ADD" />
+      <Label layoutX="645.0" layoutY="279.0" text="ALU" />
+   </children>
+</AnchorPane>

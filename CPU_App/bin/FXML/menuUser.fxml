@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.UserController">
+   <children>
+      <StackPane prefHeight="25.0" prefWidth="960.0">
+         <children>
+            <MenuBar fx:id="menu" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="User">
+                  <items>
+                  	<MenuItem fx:id="switch" mnemonicParsing="false" text="Switch User" onAction="#handleMenu" />
+                      <MenuItem fx:id="currentUser" mnemonicParsing="false" text="" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Animation">
+                  <items>
+      	            <MenuItem fx:id ="aluAN" mnemonicParsing="false" text="ALU" onAction="#handleMenu"/>
+	           		<MenuItem fx:id="storeAN" mnemonicParsing="false" text="Store" onAction="#handleMenu"/>
+	            	<MenuItem fx:id ="loadAN" mnemonicParsing="false" text="Load" onAction="#handleMenu"/>
+	            	<MenuItem mnemonicParsing="false" text="Branch" />
+      	        </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Drag n Drop">
+                	<items>
+      	      		<MenuItem fx:id="drag" mnemonicParsing="false" text="Open Drag and Drop" onAction="#handleMenu" />
+                	</items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Data Path">
+                	<items>
+      	          	<MenuItem fx:id="DPALU" mnemonicParsing="false" onAction="#handleMenu" text="ALU" />
+      	          	<MenuItem fx:id="DPSTORE" mnemonicParsing="false" onAction="#handleMenu" text="Store" />
+      	          	<MenuItem fx:id="DPLOAD" mnemonicParsing="false" onAction="#handleMenu" text="Load" />
+      	          	<MenuItem fx:id="DPBRANCH" mnemonicParsing="false" onAction="#handleMenu" text="Branch" />
+                	</items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Control Unit">
+                  <items>
+                    <MenuItem fx:id="CPALU" mnemonicParsing="false" onAction="#handleMenu" text="ALU" />
+   	          		<MenuItem fx:id="CPSTORE" mnemonicParsing="false" onAction="#handleMenu" text="Store" />
+   	          		<MenuItem fx:id="CPLOAD" mnemonicParsing="false" onAction="#handleMenu" text="Load" />
+   	          		<MenuItem fx:id="CPBRANCH" mnemonicParsing="false" onAction="#handleMenu" text="Branch" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </children>
+      </StackPane>
+      <TextField fx:id="userName" layoutX="406.0" layoutY="244.0" />
+      <Label fx:id="e" layoutX="406.0" layoutY="227.0" text="Enter Username" />
+      <Button fx:id="submit" layoutX="501.0" layoutY="271.0" mnemonicParsing="false" onAction="#handleSubmit" text="Submit" />
+      <Label fx:id="welcome" layoutX="330.0" layoutY="106.0" prefHeight="108.0" prefWidth="301.0" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

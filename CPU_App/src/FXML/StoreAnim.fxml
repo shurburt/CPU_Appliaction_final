@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AnimStoreController">
+   <children>
+      <MenuBar fx:id="menu" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="User">
+            <items>
+            	<MenuItem fx:id="switch" mnemonicParsing="false" onAction="#handleMenu" text="Switch User" />
+                <MenuItem fx:id="currentUser" mnemonicParsing="false" text="" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Animation">
+            <items>
+	            <MenuItem fx:id="aluAN" mnemonicParsing="false" onAction="#handleMenu" text="ALU" />
+	           	<MenuItem fx:id="storeAN" mnemonicParsing="false" text="Store" onAction="#handleMenu"/>
+	            <MenuItem fx:id="loadAN" mnemonicParsing="false" onAction="#handleMenu" text="Load" />
+	            <MenuItem mnemonicParsing="false" text="Branch" />
+	        </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Drag n Drop">
+          	<items>
+	      		<MenuItem fx:id="drag" mnemonicParsing="false" text="Open Drag and Drop" onAction="#handleMenu" />
+          	</items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Data Path">
+          	<items>
+	          	<MenuItem fx:id="DPALU" mnemonicParsing="false" onAction="#handleMenu" text="ALU" />
+	          	<MenuItem fx:id="DPSTORE" mnemonicParsing="false" onAction="#handleMenu" text="Store" />
+	          	<MenuItem fx:id="DPLOAD" mnemonicParsing="false" onAction="#handleMenu" text="Load" />
+	          	<MenuItem fx:id="DPBRANCH" mnemonicParsing="false" onAction="#handleMenu" text="Branch" />
+          	</items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Control Unit">
+            <items>
+              	<MenuItem fx:id="CPALU" mnemonicParsing="false" onAction="#handleMenu" text="ALU" />
+	          	<MenuItem fx:id="CPSTORE" mnemonicParsing="false" onAction="#handleMenu" text="Store" />
+	          	<MenuItem fx:id="CPLOAD" mnemonicParsing="false" onAction="#handleMenu" text="Load" />
+	          	<MenuItem fx:id="CPBRANCH" mnemonicParsing="false" onAction="#handleMenu" text="Branch" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Group layoutX="-69.0" layoutY="-58.0" scaleX="0.85" scaleY="0.75">
+         <children>
+            <Button fx:id="btn" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#button" text="Animate" />
+            <Circle fx:id="circle8" fill="#cbd771" layoutX="199.0" layoutY="466.0" radius="8.0" stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="ROUND" />
+            <Label layoutX="728.0" layoutY="426.0" text="ALU" />
+            <Circle fx:id="circle16" fill="#cbd771" layoutX="535.0" layoutY="492.0" radius="8.0" stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="ROUND" />
+            <Polyline fx:id="testPath0" layoutX="60.0" layoutY="230.0" strokeWidth="2.0">
+               <points>
+                  <Double fx:value="0.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="235.0" />
+                  <Double fx:value="39.0" />
+                  <Double fx:value="235.0" />
+               </points>
+            </Polyline>
+            <Label fx:id="addr" alignment="CENTER" layoutX="842.0" layoutY="306.0" prefHeight="17.0" prefWidth="54.0" text="address" textAlignment="RIGHT" wrapText="true">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <Polyline fx:id="testPath7" layoutX="268.0" layoutY="463.0" strokeWidth="2.0">
+               <points>
+                  <Double fx:value="0.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="186.0" />
+                  <Double fx:value="110.0" />
+                  <Double fx:value="186.0" />
+               </points>
+            </Polyline>
+            <Polyline fx:id="testPath11" layoutX="623.0" layoutY="220.0" stroke="#4885e7" strokeWidth="2.0">
+               <points>
+                  <Double fx:value="0.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="100.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="100.0" />
+                  <Double fx:value="122.0" />
+               </points>
+            </Polyline>
+            <Line fx:id="testPath5" endX="95.0" layoutX="268.0" layoutY="378.0" strokeWidth="2.0" />
+            <Label fx:id="wrdat" alignment="CENTER" layoutX="370.0" layoutY="506.0" text="write data" textAlignment="CENTER">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <Circle fx:id="circle14" fill="#cbd771" layoutX="535.0" layoutY="492.0" radius="8.0" stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="ROUND" />
+            <Circle fill="WHITE" layoutX="418.0" layoutY="647.0" radius="40.0" stroke="BLACK" strokeWidth="2.0" />
+            <Circle fx:id="circle6" fill="#cbd771" layoutX="199.0" layoutY="466.0" radius="8.0" stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="ROUND" />
+            <Label fx:id="rdDat2" layoutX="495.0" layoutY="484.0" prefHeight="17.0" prefWidth="65.0" text="read data 2" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <Circle fx:id="circle10" fill="#cbd771" layoutX="429.0" layoutY="652.0" radius="8.0" stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="ROUND" />
+            <Ellipse fx:id="control" fill="WHITE" layoutX="527.0" layoutY="205.0" radiusX="100.0" radiusY="63.0" stroke="BLACK" strokeWidth="2.0" />
+            <Line fx:id="testPath6" endX="95.0" layoutX="268.0" layoutY="420.0" strokeWidth="2.0" />
+            <Label fx:id="sign" layoutX="391.0" layoutY="614.0" prefHeight="67.0" prefWidth="55.0" text="Sign Extend" textAlignment="CENTER" wrapText="true" />
+            <Label fx:id="rdDat" layoutX="962.0" layoutY="327.0" text="Read data">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <Circle fx:id="circle2" fill="#cbd771" layoutX="219.0" layoutY="463.0" radius="8.0" stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="ROUND" />
+            <Circle fx:id="circle5" fill="#cbd771" layoutX="217.0" layoutY="464.0" radius="8.0" stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="ROUND" />
+            <Circle fx:id="startDot" layoutX="60.0" layoutY="225.0" radius="8.0" stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="ROUND" />
+            <Circle fx:id="circle11" fill="#cbd771" layoutX="462.0" layoutY="238.0" radius="8.0" stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="ROUND" />
+            <Circle fx:id="circle7" fill="#cbd771" layoutX="199.0" layoutY="463.0" radius="8.0" stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="ROUND" />
+            <Circle fx:id="circle13" fill="#cbd771" layoutX="446.0" layoutY="216.0" radius="8.0" stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="ROUND" />
+            <Circle fx:id="circle3" fill="#cbd771" layoutX="217.0" layoutY="463.0" radius="8.0" stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="ROUND" />
+            <Polyline fx:id="testPath15" layoutX="973.0" layoutY="115.0" strokeWidth="2.0">
+               <points>
+                  <Double fx:value="0.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="50.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="50.0" />
+                  <Double fx:value="-100.0" />
+                  <Double fx:value="-870.0" />
+                  <Double fx:value="-100.0" />
+                  <Double fx:value="-870.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="-880.0" />
+                  <Double fx:value="0.0" />
+               </points>
+            </Polyline>
+            <Line fx:id="testPath2" endX="40.0" layoutX="228.0" layoutY="463.0" strokeWidth="2.0" />
+            <Line fx:id="testPath4" endX="160.0" layoutX="268.0" layoutY="208.0" strokeWidth="2.0" />
+            <Polyline fx:id="testPath13" layoutX="562.0" layoutY="496.0" strokeLineCap="ROUND" strokeWidth="2.0">
+               <points>
+                  <Double fx:value="0.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="50.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="50.0" />
+                  <Double fx:value="110.0" />
+                  <Double fx:value="254.0" />
+                  <Double fx:value="110.0" />
+                  <Double fx:value="254.0" />
+                  <Double fx:value="-45.0" />
+                  <Double fx:value="281.0" />
+                  <Double fx:value="-45.0" />
+               </points>
+            </Polyline>
+            <Circle fx:id="circle9" fill="#cbd771" layoutX="446.0" layoutY="216.0" radius="8.0" stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="ROUND" />
+            <Label fx:id="rdadd1" alignment="CENTER" layoutX="362.0" layoutY="369.0" prefHeight="17.0" prefWidth="69.0" text="read addr1" textAlignment="CENTER">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="intr" alignment="CENTER" layoutX="166.0" layoutY="441.0" prefHeight="46.0" prefWidth="51.0" text="Instr[31-0]" textAlignment="CENTER">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <Circle fx:id="circle15" fill="#cbd771" layoutX="535.0" layoutY="492.0" radius="8.0" stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="ROUND" />
+            <Label layoutX="115.0" layoutY="370.0" prefHeight="77.0" prefWidth="98.0" text="Instruction Memory" textAlignment="CENTER" wrapText="true" />
+            <Label layoutX="495.0" layoutY="195.0" text="Control" textAlignment="CENTER" />
+            <Polyline fx:id="testPath9" layoutX="458.0" layoutY="652.0" strokeLineCap="ROUND" strokeWidth="2.0">
+               <points>
+                  <Double fx:value="0.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="175.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="175.0" />
+                  <Double fx:value="-150.0" />
+                  <Double fx:value="228.0" />
+                  <Double fx:value="-150.0" />
+               </points>
+            </Polyline>
+            <Line fx:id="testPath8" endY="104.0" layoutX="458.0" layoutY="249.0" stroke="#4885e7" strokeWidth="2.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="163.0" layoutX="99.0" layoutY="370.0" stroke="BLACK" strokeWidth="2.0" width="129.0" />
+            <Label fx:id="wradd" alignment="CENTER" layoutX="362.0" layoutY="464.0" prefHeight="17.0" prefWidth="68.0" text="write addr" textAlignment="CENTER">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="52.0" layoutY="115.0" text="PC" />
+            <Label fx:id="rdadd" alignment="CENTER" layoutX="99.0" layoutY="436.0" prefHeight="56.0" prefWidth="48.0" text="Read Addr" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <Circle fx:id="circle0" fill="#cbd771" layoutX="60.0" layoutY="225.0" radius="8.0" stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="ROUND" />
+            <Circle fx:id="circle4" fill="#cbd771" layoutX="213.0" layoutY="465.0" radius="8.0" stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="ROUND" />
+            <Line fx:id="testPath16" endY="50.0" layoutX="60.0" layoutY="174.0" strokeWidth="2.0" />
+            <Polyline fx:id="testPath12" layoutX="797.0" layoutY="425.0" strokeType="CENTERED" strokeWidth="2.0">
+               <points>
+                  <Double fx:value="0.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="20.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="20.0" />
+                  <Double fx:value="-110.0" />
+                  <Double fx:value="45.0" />
+                  <Double fx:value="-110.0" />
+               </points>
+            </Polyline>
+            <Polyline fx:id="testPath3" layoutX="268.0" layoutY="463.0" strokeWidth="2.0">
+               <points>
+                  <Double fx:value="0.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="-330.0" />
+                  <Double fx:value="565.0" />
+                  <Double fx:value="-330.0" />
+                  <Double fx:value="565.0" />
+                  <Double fx:value="-299.0" />
+                  <Double fx:value="634.0" />
+                  <Double fx:value="-299.0" />
+               </points>
+            </Polyline>
+            <Circle fx:id="circle1" fill="#cbd771" layoutX="217.0" layoutY="463.0" radius="8.0" stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="ROUND" />
+            <Label fx:id="rdDat1" layoutX="495.0" layoutY="378.0" prefHeight="17.0" prefWidth="64.0" text="read data1" textAlignment="CENTER">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <Line fx:id="testPath10" endX="124.0" layoutX="562.0" layoutY="378.0" strokeWidth="2.0" />
+            <Rectangle fx:id="pc" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="97.0" layoutX="31.0" layoutY="77.0" stroke="BLACK" strokeWidth="2.0" width="61.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="200.0" layoutX="362.0" layoutY="352.0" stroke="BLACK" strokeWidth="2.0" width="200.0" />
+            <Polyline fx:id="testPath14" layoutX="624.0" layoutY="189.0" stroke="#4885e7" strokeLineCap="ROUND" strokeWidth="2.0">
+               <points>
+                  <Double fx:value="0.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="240.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="240.0" />
+                  <Double fx:value="90.0" />
+               </points>
+            </Polyline>
+            <Label layoutX="902.0" layoutY="344.0" prefHeight="67.0" prefWidth="60.0" text="Data Memory" textAlignment="CENTER" wrapText="true" />
+            <Polyline fx:id="testPath1" layoutX="60.0" layoutY="225.0" strokeWidth="2.0">
+               <points>
+                  <Double fx:value="0.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="115.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="115.0" />
+                  <Double fx:value="-160.0" />
+                  <Double fx:value="840.0" />
+                  <Double fx:value="-160.0" />
+               </points>
+            </Polyline>
+            <Label fx:id="wrDat1" alignment="CENTER" layoutX="846.0" layoutY="439.0" text="Write data" textAlignment="RIGHT" wrapText="true">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="433.0" layoutY="400.0" prefHeight="94.0" prefWidth="59.0" text="Register File" textAlignment="CENTER" wrapText="true" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="233.0" layoutX="842.0" layoutY="279.0" stroke="BLACK" strokeWidth="2.0" width="180.0" />
+            <Polygon fill="WHITE" layoutX="732.0" layoutY="465.0" stroke="BLACK" strokeWidth="2.0">
+               <points>
+                  <Double fx:value="-45.0" />
+                  <Double fx:value="100.0" />
+                  <Double fx:value="65.0" />
+                  <Double fx:value="20.0" />
+                  <Double fx:value="65.0" />
+                  <Double fx:value="-80.0" />
+                  <Double fx:value="-45.0" />
+                  <Double fx:value="-140.0" />
+                  <Double fx:value="-45.0" />
+                  <Double fx:value="-60.0" />
+                  <Double fx:value="-25.0" />
+                  <Double fx:value="-30.0" />
+                  <Double fx:value="-45.0" />
+                  <Double fx:value="-10.0" />
+               </points>
+            </Polygon>
+            <Circle fx:id="circle12" fill="#cbd771" layoutX="446.0" layoutY="216.0" radius="8.0" stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="ROUND" />
+            <Label fx:id="rdadd2" alignment="CENTER" layoutX="362.0" layoutY="409.0" prefHeight="25.0" prefWidth="72.0" text="read addr2" textAlignment="CENTER">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="937.0" layoutY="105.0" text="Add" />
+            <Polygon fx:id="add1" fill="WHITE" layoutX="927.0" layoutY="146.0" stroke="BLACK" strokeWidth="2.0">
+               <points>
+                  <Double fx:value="-25.0" />
+                  <Double fx:value="80.0" />
+                  <Double fx:value="45.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="45.0" />
+                  <Double fx:value="-60.0" />
+                  <Double fx:value="-25.0" />
+                  <Double fx:value="-110.0" />
+                  <Double fx:value="-25.0" />
+                  <Double fx:value="-50.0" />
+                  <Double fx:value="-5.0" />
+                  <Double fx:value="-25.0" />
+                  <Double fx:value="-25.0" />
+                  <Double fx:value="0.0" />
+               </points>
+            </Polygon>
+         </children>
+      </Group>
+   </children>
+</AnchorPane>
